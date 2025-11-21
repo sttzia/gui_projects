@@ -1,0 +1,40 @@
+[workspace]
+resolver = "2"
+# Add member crate paths here as you create them, for example:
+# members = [
+#     "apps/app_one",
+#     "apps/app_two",
+#     "libs/ui_components"
+# ]
+members = ["apps/note_app", "apps/calc_app"]
+
+[workspace.dependencies]
+# Centralized egui dependencies for GUI applications with native rendering
+eframe = { version = "0.29", default-features = true }
+egui = { version = "0.29" }
+egui_extras = { version = "0.29", features = ["syntect"] }
+rfd = { version = "0.14" }
+
+# Example of adding other shared deps later (uncomment / extend as needed):
+# serde = { version = "1", features = ["derive"] }
+# anyhow = "1"
+# thiserror = "1"
+
+[workspace.metadata]
+# GUI projects in this workspace
+# Each project uses the shared egui/eframe dependencies
+gui-projects = [
+    { name = "note_app", path = "apps/note_app", description = "Rich text note editor with formatting support" },
+    { name = "calc_app", path = "apps/calc_app", description = "Scientific programmer calculator with 18-digit precision, base conversion, and bitwise operations" },
+]
+
+[workspace.package]
+edition = "2021"
+# Workspace-level configuration for all GUI projects
+# name = "gui_projects"
+# description = "Multi-crate GUI workspace using egui framework"
+
+[workspace.lints.clippy]
+# Shared clippy lint levels (adjust as you prefer)
+unwrap_used = "warn"
+expect_used = "warn"

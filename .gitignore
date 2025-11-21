@@ -1,0 +1,40 @@
+# Rust build artifacts
+/target/
+**/target/
+
+# Cargo lock file (uncomment if this is an application workspace)
+# Cargo.lock is typically committed for applications but not for libraries
+# Cargo.lock
+
+# Debug and release builds
+debug/
+release/
+
+# Remove Cargo.lock from gitignore for applications
+!/Cargo.lock
+
+# Rust incremental compilation
+**/*.rs.bk
+*.pdb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Application-specific
+*.rtxt.bak
+Cargo.lock
+test.txt

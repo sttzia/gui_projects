@@ -1,0 +1,12 @@
+[package]
+name = "note_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe.workspace = true
+egui.workspace = true
+rfd.workspace = true
+
+# (Optional) future shared deps:
+# serde.workspace = true
