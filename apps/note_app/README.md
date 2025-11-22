@@ -110,6 +110,15 @@ cd apps/note_app
 cargo build --release
 ```
 
+### Windows Console Behavior
+
+The application is configured to hide the console window in release builds on Windows:
+
+- **Debug builds**: Console window appears for debugging (shows errors and `println!` output)
+- **Release builds**: No console window, clean GUI-only launch
+
+This is controlled by `#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]` in `main.rs`. Linux and macOS are not affected.
+
 ## Workspace Integration
 
 This app is part of the `gui_projects` workspace and uses shared dependencies defined in the root `Cargo.toml`:

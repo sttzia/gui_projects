@@ -189,6 +189,15 @@ cd apps/calc_app
 cargo build --release
 ```
 
+### Windows Console Behavior
+
+The application is configured to hide the console window in release builds on Windows:
+
+- **Debug builds**: Console window appears for debugging (shows errors and `println!` output)
+- **Release builds**: No console window, clean GUI-only launch
+
+This is controlled by `#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]` in `main.rs`. Linux and macOS are not affected.
+
 ## Dependencies
 
 - `eframe` 0.29: Application framework

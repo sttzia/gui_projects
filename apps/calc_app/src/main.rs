@@ -1,3 +1,5 @@
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 use eframe::egui;
 use egui::{Color32, RichText, Vec2};
 use num_bigint::BigUint;

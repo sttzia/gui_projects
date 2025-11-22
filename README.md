@@ -126,6 +126,15 @@ cargo clean
 cargo check --workspace
 ```
 
+### Windows Console Behavior
+
+Both applications are configured to hide the console window in release builds on Windows:
+
+- **Debug builds** (`cargo run`): Console window visible for debugging output
+- **Release builds** (`cargo build --release`): No console window, pure GUI experience
+
+This is controlled by the `#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]` attribute in each application's `main.rs` file. This setting has no effect on Linux or macOS.
+
 ## License
 
 Individual projects may have their own licenses.
