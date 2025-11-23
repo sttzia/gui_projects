@@ -38,3 +38,4 @@ ehthumbs.db
 *.rtxt.bak
 Cargo.lock
 test.txt
+test.rtxt

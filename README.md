@@ -28,16 +28,31 @@ All projects in this workspace share the following dependencies (defined in work
 
 ### 1. Note App (`apps/note_app`)
 
-A rich text note editor with formatting capabilities.
+A rich text note editor with advanced formatting and color features.
 
 **Features:**
 
-- Direct inline text editing
-- Mouse text selection
-- Text formatting: Bold, Italic, Bold+Italic, Regular
+- Direct inline text editing with real-time preview
+- Mouse text selection and cursor positioning
+- Text formatting: Bold (1.3x size), Italic, Bold+Italic, Regular
+- **Custom text colors** - Full RGB color picker for text
+- **Text highlighting** - Background color highlighting (like a real highlighter marker)
+- Font family selection: Monospace, Proportional, or Emoji
 - Dynamic font sizing (8-72px)
-- File open/save functionality
-- Real-time formatting preview
+- Undo/Redo with history tracking (up to 100 states)
+- Find & Replace functionality with next/previous navigation
+- Line numbers display (optional)
+- Tab indentation support (Ctrl+[)
+- File operations with custom `.rtxt` format that preserves formatting and colors
+- Status bar showing file name, line count, and character count
+- 1200×1024 window for spacious note-taking
+
+**Special Color Features:**
+
+- Apply any color to text for organization and visual coding
+- Highlight text with custom background colors for emphasis
+- Combine colors with Bold/Italic formatting
+- All colors are saved and preserved in `.rtxt` files
 
 **Run:**
 
